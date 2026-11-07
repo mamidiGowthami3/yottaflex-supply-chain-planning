@@ -1,0 +1,51 @@
+id,location_code,name,type,city,state,country,postal_code,address,capacity,active
+1,LOC-0001,"Chicago Manufacturing Plant",PLANT,"Chicago",IL,USA,10015,"105 Logistics Way",164546.22,true
+2,LOC-0002,"Dallas Regional Warehouse",WAREHOUSE,"Dallas",TX,USA,10030,"110 Logistics Way",92791.27,true
+3,LOC-0003,"Seattle Manufacturing Plant",PLANT,"Seattle",WA,USA,10045,"115 Logistics Way",114995.61,true
+4,LOC-0004,"Atlanta Manufacturing Plant",PLANT,"Atlanta",GA,USA,10060,"120 Logistics Way",142433.94,true
+5,LOC-0005,"Columbus Regional Warehouse",WAREHOUSE,"Columbus",OH,USA,10075,"125 Logistics Way",113189.11,true
+6,LOC-0006,"Phoenix Manufacturing Plant",PLANT,"Phoenix",AZ,USA,10090,"130 Logistics Way",245719.55,true
+7,LOC-0007,"Philadelphia Manufacturing Plant",PLANT,"Philadelphia",PA,USA,10105,"135 Logistics Way",64458.41,true
+8,LOC-0008,"Memphis Manufacturing Plant",PLANT,"Memphis",TN,USA,10120,"140 Logistics Way",166585.51,true
+9,LOC-0009,"Denver Distribution Center",DISTRIBUTION_CENTER,"Denver",CO,USA,10135,"145 Logistics Way",234450.98,true
+10,LOC-0010,"Austin Manufacturing Plant",PLANT,"Austin",TX,USA,10150,"150 Logistics Way",141122.90,true
+11,LOC-0011,"Detroit Manufacturing Plant",PLANT,"Detroit",MI,USA,10165,"155 Logistics Way",93342.14,true
+12,LOC-0012,"Miami Distribution Center",DISTRIBUTION_CENTER,"Miami",FL,USA,10180,"160 Logistics Way",126072.68,true
+13,LOC-0013,"Charlotte Manufacturing Plant",PLANT,"Charlotte",NC,USA,10195,"165 Logistics Way",178023.69,true
+14,LOC-0014,"Kansas City Regional Warehouse",WAREHOUSE,"Kansas City",MO,USA,10210,"170 Logistics Way",223067.32,true
+15,LOC-0015,"Indianapolis Distribution Center",DISTRIBUTION_CENTER,"Indianapolis",IN,USA,10225,"175 Logistics Way",134773.76,true
+16,LOC-0016,"Salt Lake City Manufacturing Plant",PLANT,"Salt Lake City",UT,USA,10240,"180 Logistics Way",54461.03,true
+17,LOC-0017,"Nashville Regional Warehouse",WAREHOUSE,"Nashville",TN,USA,10255,"185 Logistics Way",64258.31,true
+18,LOC-0018,"Portland Manufacturing Plant",PLANT,"Portland",OR,USA,10270,"190 Logistics Way",121670.57,true
+19,LOC-0019,"Minneapolis Manufacturing Plant",PLANT,"Minneapolis",MN,USA,10285,"195 Logistics Way",75950.93,true
+20,LOC-0020,"Houston Regional Warehouse",WAREHOUSE,"Houston",TX,USA,10300,"200 Logistics Way",231844.42,true
+21,LOC-0021,"San Jose Manufacturing Plant",PLANT,"San Jose",CA,USA,10315,"205 Logistics Way",56317.69,true
+22,LOC-0022,"Boston Manufacturing Plant",PLANT,"Boston",MA,USA,10330,"210 Logistics Way",77335.95,true
+23,LOC-0023,"Tampa Manufacturing Plant",PLANT,"Tampa",FL,USA,10345,"215 Logistics Way",78656.00,true
+24,LOC-0024,"Baltimore Distribution Center",DISTRIBUTION_CENTER,"Baltimore",MD,USA,10360,"220 Logistics Way",191947.06,true
+25,LOC-0025,"Raleigh Manufacturing Plant",PLANT,"Raleigh",NC,USA,10375,"225 Logistics Way",224683.14,true
+26,LOC-0026,"Louisville Manufacturing Plant",PLANT,"Louisville",KY,USA,10390,"230 Logistics Way",88426.75,true
+27,LOC-0027,"Milwaukee Distribution Center",DISTRIBUTION_CENTER,"Milwaukee",WI,USA,10405,"235 Logistics Way",69348.60,true
+28,LOC-0028,"Albuquerque Manufacturing Plant",PLANT,"Albuquerque",NM,USA,10420,"240 Logistics Way",56575.64,true
+29,LOC-0029,"Tucson Regional Warehouse",WAREHOUSE,"Tucson",AZ,USA,10435,"245 Logistics Way",199529.00,true
+30,LOC-0030,"Fresno Distribution Center",DISTRIBUTION_CENTER,"Fresno",CA,USA,10450,"250 Logistics Way",126967.77,true
+31,LOC-0031,"Sacramento Manufacturing Plant",PLANT,"Sacramento",CA,USA,10465,"255 Logistics Way",121011.15,true
+32,LOC-0032,"Mesa Regional Warehouse",WAREHOUSE,"Mesa",AZ,USA,10480,"260 Logistics Way",191324.05,true
+33,LOC-0033,"Omaha Manufacturing Plant",PLANT,"Omaha",NE,USA,10495,"265 Logistics Way",161361.80,true
+34,LOC-0034,"Colorado Springs Manufacturing Plant",PLANT,"Colorado Springs",CO,USA,10510,"270 Logistics Way",229655.17,true
+35,LOC-0035,"Virginia Beach Regional Warehouse",WAREHOUSE,"Virginia Beach",VA,USA,10525,"275 Logistics Way",131929.06,true
+36,LOC-0036,"Oakland Manufacturing Plant",PLANT,"Oakland",CA,USA,10540,"280 Logistics Way",192253.65,true
+37,LOC-0037,"Tulsa Manufacturing Plant",PLANT,"Tulsa",OK,USA,10555,"285 Logistics Way",81453.72,true
+38,LOC-0038,"Arlington Manufacturing Plant",PLANT,"Arlington",TX,USA,10570,"290 Logistics Way",90401.52,true
+39,LOC-0039,"New Orleans Distribution Center",DISTRIBUTION_CENTER,"New Orleans",LA,USA,10585,"295 Logistics Way",95845.28,true
+40,LOC-0040,"Wichita Manufacturing Plant",PLANT,"Wichita",KS,USA,10600,"300 Logistics Way",85342.33,true
+41,LOC-0041,"Cleveland Manufacturing Plant",PLANT,"Cleveland",OH,USA,10615,"305 Logistics Way",190982.54,true
+42,LOC-0042,"Bakersfield Distribution Center",DISTRIBUTION_CENTER,"Bakersfield",CA,USA,10630,"310 Logistics Way",155838.24,true
+43,LOC-0043,"Aurora Manufacturing Plant",PLANT,"Aurora",CO,USA,10645,"315 Logistics Way",153436.80,true
+44,LOC-0044,"Anaheim Regional Warehouse",WAREHOUSE,"Anaheim",CA,USA,10660,"320 Logistics Way",148815.76,true
+45,LOC-0045,"Honolulu Distribution Center",DISTRIBUTION_CENTER,"Honolulu",HI,USA,10675,"325 Logistics Way",231423.32,true
+46,LOC-0046,"Santa Ana Manufacturing Plant",PLANT,"Santa Ana",CA,USA,10690,"330 Logistics Way",156642.84,true
+47,LOC-0047,"Riverside Regional Warehouse",WAREHOUSE,"Riverside",CA,USA,10705,"335 Logistics Way",116818.34,true
+48,LOC-0048,"Corpus Christi Manufacturing Plant",PLANT,"Corpus Christi",TX,USA,10720,"340 Logistics Way",153044.81,true
+49,LOC-0049,"Lexington Manufacturing Plant",PLANT,"Lexington",KY,USA,10735,"345 Logistics Way",118619.78,true
+50,LOC-0050,"Stockton Regional Warehouse 2",WAREHOUSE,"Stockton",CA,USA,10750,"350 Logistics Way",95253.61,true

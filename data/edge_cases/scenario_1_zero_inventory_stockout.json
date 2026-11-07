@@ -1,0 +1,24 @@
+{
+  "scenarioCode": "EDGE-01",
+  "name": "Zero Starting Inventory Immediate Stockout",
+  "description": "Tests system behavior when warehouse starts with 0.0 available stock and an immediate Week 1 demand occurs with zero lead time buffer.",
+  "parameters": {
+    "skuCode": "SKU-EDGE-01",
+    "locationCode": "LOC-EDGE-01",
+    "startingOnHand": 0.0,
+    "startingReserved": 0.0,
+    "startingAvailable": 0.0,
+    "safetyStock": 25.0,
+    "week1Demand": 50.0,
+    "openInboundSupply": 0.0
+  },
+  "expectedBehavior": {
+    "projectedEndingBalance": -50.0,
+    "shortageTriggered": true,
+    "shortageQuantity": 75.0,
+    "severity": "CRITICAL",
+    "rootCause": "STOCKOUT_ZERO_BUFFER",
+    "mitigationHandling": "Only expedited transport or local surplus transfer can mitigate; standard supplier replenishment rejected due to lead time."
+  }
+}
+

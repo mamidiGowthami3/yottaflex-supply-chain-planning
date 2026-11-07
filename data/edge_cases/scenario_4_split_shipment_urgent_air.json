@@ -1,0 +1,26 @@
+{
+  "scenarioCode": "EDGE-04",
+  "name": "Partial Split Shipment with Urgent Air Freight",
+  "description": "Tests splitting a large ocean/ground purchase order to expedite only the exact shortage portion via express air freight while keeping remainder on economy transit.",
+  "parameters": {
+    "shortageQuantity": 80.0,
+    "purchaseOrder": {
+      "poNumber": "PO-EDGE-04",
+      "quantityOrdered": 500.0,
+      "quantityReceived": 0.0,
+      "pendingQuantity": 500.0,
+      "standardTransport": "OCEAN",
+      "expeditedTransport": "AIR",
+      "expeditedCostPerUnit": 14.50
+    }
+  },
+  "expectedBehavior": {
+    "strategy": "SPLIT_SHIPMENT",
+    "mitigatedQuantity": 80.0,
+    "splitRemainingQuantity": 420.0,
+    "freightMode": "AIR",
+    "costImpact": 1160.00,
+    "details": "Only 80.0 units expedited via AIR; remaining 420.0 units maintained on standard schedule, avoiding excess expedited freight premium."
+  }
+}
+

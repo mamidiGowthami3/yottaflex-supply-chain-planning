@@ -1,0 +1,137 @@
+{
+  "scenarioName": "Ground Truth Canonical Supply Chain Baseline",
+  "description": "Deterministic benchmark scenario with known mathematical inputs and verified shortage and mitigation outcomes.",
+  "masterData": {
+    "sku": {
+      "id": 1,
+      "skuCode": "SKU-GT-001",
+      "name": "Industrial Dual-Core Microcontroller",
+      "category": "Electronics",
+      "unitCost": 45.00,
+      "sellingPrice": 67.50,
+      "safetyStock": 40,
+      "reorderPoint": 80,
+      "leadTimeDays": 10
+    },
+    "destinationLocation": {
+      "id": 1,
+      "locationCode": "LOC-GT-001",
+      "name": "Chicago Central Distribution Center",
+      "type": "DISTRIBUTION_CENTER",
+      "capacity": 150000.00
+    },
+    "sourceLocation": {
+      "id": 2,
+      "locationCode": "LOC-GT-002",
+      "name": "Detroit Regional Warehouse",
+      "type": "WAREHOUSE",
+      "capacity": 80000.00
+    },
+    "primarySupplier": {
+      "id": 1,
+      "supplierCode": "SUP-GT-001",
+      "name": "Apex Semiconductor Ltd",
+      "reliabilityScore": 92.5
+    },
+    "alternativeSupplier": {
+      "id": 2,
+      "supplierCode": "SUP-GT-002",
+      "name": "Vanguard Microelectronics Inc",
+      "reliabilityScore": 88.0
+    }
+  },
+  "initialState": {
+    "destinationInventory": {
+      "skuCode": "SKU-GT-001",
+      "locationCode": "LOC-GT-001",
+      "quantityOnHand": 60.0,
+      "quantityReserved": 20.0,
+      "quantityAvailable": 40.0,
+      "safetyStock": 40.0,
+      "status": "NORMAL"
+    },
+    "sourceInventory": {
+      "skuCode": "SKU-GT-001",
+      "locationCode": "LOC-GT-002",
+      "quantityOnHand": 180.0,
+      "quantityReserved": 30.0,
+      "quantityAvailable": 150.0,
+      "safetyStock": 50.0,
+      "transferableSurplus": 100.0
+    },
+    "existingPurchaseOrders": [
+      {
+        "poNumber": "PO-GT-2026-001",
+        "supplierCode": "SUP-GT-001",
+        "skuCode": "SKU-GT-001",
+        "destinationLocationCode": "LOC-GT-001",
+        "orderDate": "2026-11-05",
+        "expectedDeliveryDate": "2026-11-20",
+        "quantityOrdered": 120.0,
+        "quantityReceived": 0.0,
+        "status": "PLACED"
+      }
+    ],
+    "weeklyForecasts": [
+      {
+        "week": 1,
+        "forecastDate": "2026-11-09",
+        "demand": 30.0,
+        "projectedEndingBalance": 10.0,
+        "shortageExpected": true,
+        "shortageQuantity": 30.0,
+        "explanation": "Balance 10.0 is below Safety Stock 40.0 by 30.0 units."
+      },
+      {
+        "week": 2,
+        "forecastDate": "2026-11-16",
+        "demand": 45.0,
+        "projectedEndingBalance": -35.0,
+        "shortageExpected": true,
+        "shortageQuantity": 75.0,
+        "explanation": "Cumulative deficit reaches 35 units below zero (75 below safety stock)."
+      },
+      {
+        "week": 3,
+        "forecastDate": "2026-11-23",
+        "demand": 40.0,
+        "projectedEndingBalance": 45.0,
+        "shortageExpected": false,
+        "shortageQuantity": 0.0,
+        "explanation": "PO-GT-2026-001 delivers 120 units on Nov 20, restoring stock."
+      }
+    ]
+  },
+  "expectedMitigations": [
+    {
+      "rank": 1,
+      "strategy": "EXPEDITE_PURCHASE_ORDER",
+      "targetPurchaseOrder": "PO-GT-2026-001",
+      "mitigatedQuantity": 30.0,
+      "expeditedDeliveryDate": "2026-11-14",
+      "freightMode": "AIR",
+      "feasibility": "FEASIBLE",
+      "rationale": "Accelerating PO delivery by 6 days satisfies Week 1 deficit before Week 2 demand surge."
+    },
+    {
+      "rank": 2,
+      "strategy": "REALLOCATE_INVENTORY",
+      "sourceLocation": "LOC-GT-002",
+      "mitigatedQuantity": 30.0,
+      "freightMode": "ROAD",
+      "leadTimeDays": 2,
+      "feasibility": "FEASIBLE",
+      "rationale": "LOC-GT-002 has 100 units transferable surplus after safeguarding 50 units safety stock."
+    },
+    {
+      "rank": 3,
+      "strategy": "ALTERNATIVE_SUPPLIER",
+      "supplierCode": "SUP-GT-002",
+      "mitigatedQuantity": 30.0,
+      "leadTimeDays": 4,
+      "feasibility": "FEASIBLE",
+      "rationale": "Vanguard Microelectronics has verified 1,200 available monthly capacity."
+    }
+  ]
+}
+
