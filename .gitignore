@@ -59,5 +59,4 @@ application-*.properties
 logs/
 *.sqlite
 *.sqlite3
-
 build-log.txt
