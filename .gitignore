@@ -1,0 +1,63 @@
+# Target build directory
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE configurations
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbattrs.xml
+/build/
+
+### VS Code & Editors ###
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables & secrets protection (Never commit sensitive credentials)
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.pkcs12
+*.jks
+*.p12
+
+# Local Spring Boot property overrides
+application-local.properties
+application-*.properties
+!application.properties
+
+# Logs and databases
+*.log
+logs/
+*.sqlite
+*.sqlite3
+
+build-log.txt

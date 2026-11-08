@@ -1,0 +1,29 @@
+{
+  "scenarioCode": "EDGE-02",
+  "name": "Supplier Capacity Exhaustion and Allocation Cap",
+  "description": "Tests mitigation engine behavior when candidate alternate vendors have zero available capacity or capacity strictly less than shortage quantity.",
+  "parameters": {
+    "skuCode": "SKU-EDGE-02",
+    "shortageQuantity": 150.0,
+    "primarySupplier": {
+      "code": "SUP-EDGE-2A",
+      "monthlyCapacity": 2000.0,
+      "allocatedCapacity": 2000.0,
+      "availableCapacity": 0.0
+    },
+    "secondarySupplier": {
+      "code": "SUP-EDGE-2B",
+      "monthlyCapacity": 1000.0,
+      "allocatedCapacity": 960.0,
+      "availableCapacity": 40.0
+    }
+  },
+  "expectedBehavior": {
+    "primarySupplierRejected": true,
+    "rejectionReason": "Zero available capacity on effective date window.",
+    "secondarySupplierMitigatedQuantity": 40.0,
+    "secondarySupplierPartial": true,
+    "details": "Engine caps mitigatedQuantity to availableCapacity (40.0) rather than recommending unfulfillable 150.0 units."
+  }
+}
+

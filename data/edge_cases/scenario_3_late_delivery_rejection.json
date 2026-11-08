@@ -1,0 +1,24 @@
+{
+  "scenarioCode": "EDGE-03",
+  "name": "Expedite Rejection Due to Infeasible Delivery Date",
+  "description": "Tests that open Purchase Orders whose expedited transit cannot arrive before the shortage date are strictly excluded from recommendation.",
+  "parameters": {
+    "shortageDate": "2026-11-12",
+    "shortageQuantity": 60.0,
+    "purchaseOrder": {
+      "poNumber": "PO-EDGE-03",
+      "orderDate": "2026-11-06",
+      "standardDeliveryDate": "2026-11-25",
+      "standardLeadDays": 19,
+      "expeditedLeadDays": 8,
+      "calculatedExpeditedDate": "2026-11-14"
+    }
+  },
+  "expectedBehavior": {
+    "expediteFeasible": false,
+    "rejectionReason": "Calculated expedited arrival date 2026-11-14 is strictly after shortage date 2026-11-12.",
+    "mitigationOptionGenerated": false,
+    "details": "Engine refuses to generate false-positive expedite recommendation for orders that would arrive late."
+  }
+}
+

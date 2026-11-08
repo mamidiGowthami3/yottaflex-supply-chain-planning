@@ -1,0 +1,32 @@
+{
+  "scenarioCode": "EDGE-05",
+  "name": "Dynamic Score Normalization with Missing Metrics",
+  "description": "Tests multi-criteria scoring resilience when supplier reliability score is null or cost impact cannot be evaluated, ensuring 0-100 normalization without dummy fallback scores.",
+  "parameters": {
+    "mitigationOption": {
+      "strategy": "ALTERNATIVE_SUPPLIER",
+      "supplierCode": "SUP-NEW-VENDOR",
+      "supplierReliabilityScore": null,
+      "timeImpactDays": 3,
+      "costImpact": 450.00,
+      "skuUnitCost": 50.00
+    },
+    "scoringConfiguration": {
+      "costWeight": 0.40,
+      "timeWeight": 0.35,
+      "reliabilityWeight": 0.25
+    }
+  },
+  "expectedBehavior": {
+    "reliabilityComponentEvaluated": false,
+    "fallbackUsed": false,
+    "dynamicWeightRenormalization": {
+      "costEffectiveWeight": 0.5333,
+      "timeEffectiveWeight": 0.4667,
+      "sumEffectiveWeights": 1.0000
+    },
+    "compositeScoreRange": "0.0 to 100.0",
+    "details": "When reliability is absent, the system scales the available cost and time dimensions so composite score remains balanced and valid without injecting fake 80.0 reliability defaults."
+  }
+}
+
